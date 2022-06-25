@@ -1,23 +1,17 @@
 package com.team7.question;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "presenters")
+public class Presenter {
 
     @Id
     @GeneratedValue
     private int id;
-
 
     private String name;
 }
