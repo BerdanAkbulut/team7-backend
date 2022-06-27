@@ -1,4 +1,4 @@
-package com.team7.question;
+package com.team7.question.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -25,18 +25,3 @@ public class User {
 
     private String name;
 }
-
-
-//	<plugin>
-//				<groupId>org.springframework.boot</groupId>
-//				<artifactId>spring-boot-maven-plugin</artifactId>
-//
-//				<configuration>
-//					<excludes>
-//						<exclude>
-//							<groupId>org.projectlombok</groupId>
-//							<artifactId>lombok</artifactId>
-//						</exclude>
-//					</excludes>
-//				</configuration>
-//			</plugin>

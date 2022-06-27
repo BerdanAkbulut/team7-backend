@@ -1,4 +1,4 @@
-package com.team7.question;
+package com.team7.question.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
