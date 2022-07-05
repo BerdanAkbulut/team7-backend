@@ -57,6 +57,25 @@ public class QuestionService {
 
     }
 
+    public Response setAnswer(int questionId) {
+       Question question = questionRepository.findById(questionId).get();
+
+       if(question.isAnswered()) {
+           question.setAnswered(false);
+           questionRepository.save(question);
+           return new Response("unanswered",false);
+       } else {
+           question.setAnswered(true);
+           questionRepository.save(question);
+           return new Response("answered",true);
+       }
+
+    }
+
+    public List<Question> getAllQuestionsByVote(int roomId) {
+     return  this.questionRepository.getAllByRoomIdOrderByVotedParticipantsAsc(roomId);
+    }
+
   //  public List<Question> getAllMessages(String roomId) {
      //  return wsMessageRepository.getByRoomIdOrderByVotedUsersAsc(roomId);
   //  }

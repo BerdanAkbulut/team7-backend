@@ -33,7 +33,9 @@ public class Question {
     private List<Participant> votedParticipants;
 
     private Status status;
+
     private String feedback;
+
     private boolean isAnswered;
 
 

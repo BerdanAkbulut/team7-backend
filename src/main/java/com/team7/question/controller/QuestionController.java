@@ -43,6 +43,16 @@ public class QuestionController {
        return ResponseEntity.ok(this.questionService.voteQuestion(participantId,questionId));
     }
 
+    @GetMapping("/set-answer/{questionId}")
+    public ResponseEntity<Response> setAnswer(@PathVariable int questionId) {
+        return ResponseEntity.ok(this.questionService.setAnswer(questionId));
+    }
+
+    @GetMapping("/questions-sorted-vote/{roomId}")
+    public ResponseEntity<List<Question>> questionsByVoted(@PathVariable int roomId) {
+        return ResponseEntity.ok(this.questionService.getAllQuestionsByVote(roomId));
+    }
+
 
 
 

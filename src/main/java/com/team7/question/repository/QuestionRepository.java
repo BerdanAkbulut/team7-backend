@@ -14,5 +14,6 @@ public interface QuestionRepository extends JpaRepository<Question,Integer> {
 
     List<Question> getAllByRoomId(int id);
 
+    List<Question> getAllByRoomIdOrderByVotedParticipantsAsc(int roomId);
 
 }
