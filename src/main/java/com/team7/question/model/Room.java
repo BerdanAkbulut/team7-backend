@@ -7,22 +7,30 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
-@Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Presenter {
+@Entity
+public class Room {
 
     @Id
     @GeneratedValue
     private int id;
 
-    private String name;
+    @OneToOne
+    private Presenter presenter;
 
-    @OneToOne(mappedBy = "presenter")
+
+    @OneToMany(mappedBy = "room")
     @JsonIgnore
-    private Room room;
+    private List<Question> questions;
+
+
+    @ManyToMany
+    @JsonIgnore
+    private List<Participant> participantList;
 
 }
