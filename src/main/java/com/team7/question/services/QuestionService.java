@@ -76,10 +76,11 @@ public class QuestionService {
      return  this.questionRepository.getAllByRoomIdOrderByVotedParticipantsAsc(roomId);
     }
 
+    public List<Question> getAllQuestionsByParticipantId(int participantId) {
+       return this.questionRepository.getAllByParticipantId(participantId);
+    }
+
   //  public List<Question> getAllMessages(String roomId) {
      //  return wsMessageRepository.getByRoomIdOrderByVotedUsersAsc(roomId);
   //  }
-
-
-
 }

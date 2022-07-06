@@ -53,6 +53,10 @@ public class QuestionController {
         return ResponseEntity.ok(this.questionService.getAllQuestionsByVote(roomId));
     }
 
+    @GetMapping("/get-all-questions-by-participant-id/{participantId}")
+    public ResponseEntity<List<Question>> getAllQuestionsByParticipantId(@PathVariable int participantId) {
+        return ResponseEntity.ok(this.questionService.getAllQuestionsByParticipantId(participantId));
+    }
 
 
 
